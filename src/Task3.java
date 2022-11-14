@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class Task3 {
 
@@ -23,7 +25,11 @@ public class Task3 {
         LocalDate today = LocalDate.now();
         LocalDate newYearsEve = LocalDate.of(2023,1,01);
 
-        System.out.println(today);
+        // Går också att lagra periods i intar nedan
+
+        System.out.println("Months: " + Period.between(today, newYearsEve).getMonths() + " Days: " + Period.between(today, newYearsEve).getDays());
+
+        System.out.println(ChronoUnit.DAYS.between(today, newYearsEve));
 
     }
 }
