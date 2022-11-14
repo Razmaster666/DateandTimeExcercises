@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Task3 {
 
 //    Task 3 - Until New java.time.Year’s Eve
@@ -17,6 +19,11 @@ public class Task3 {
 //    ChronoUnit.DAYS.between(today, newYearsEve);
 
     public static void main(String[] args) {
+
+        LocalDate today = LocalDate.now();
+        LocalDate newYearsEve = LocalDate.of(2023,1,01);
+
+        System.out.println(today);
 
     }
 }
